@@ -1,0 +1,23 @@
+{
+  "name": "docker-image-builder",
+  "version": "0.0.0",
+  "description": "build images from many different sources!",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "true"
+  },
+  "author": "Bryan Kendall <bryan@runnable.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Runnable/docker-image-builder"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "~0.7.0",
+    "aws-sdk": "~2.0.0-rc13",
+    "debug": "~0.8.0",
+    "tar-stream": "~0.3.3",
+    "dockerode": "~1.2.10",
+    "lodash": "~2.4.1"
+  }
+}

@@ -4,7 +4,7 @@
   "description": "build images from many different sources!",
   "main": "lib/index.js",
   "scripts": {
-    "test": "true"
+    "test": "lab -vl"
   },
   "author": "Bryan Kendall <bryan@runnable.com>",
   "repository": {
@@ -19,5 +19,9 @@
     "tar-stream": "~0.3.3",
     "dockerode": "~1.2.10",
     "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "nock": "~0.28.3",
+    "lab": "~3.1.0"
   }
 }

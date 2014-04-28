@@ -1,6 +1,6 @@
 # docker-image-builder
 
-[![Dependency Status](https://david-dm.org/Runnable/docker-image-builder.svg)](https://david-dm.org/Runnable/docker-image-builder)
+[![Build Status](https://travis-ci.org/Runnable/docker-image-builder.svg)](https://travis-ci.org/Runnable/docker-image-builder) [![Dependency Status](https://david-dm.org/Runnable/docker-image-builder.svg)](https://david-dm.org/Runnable/docker-image-builder)
 
 Builds docker images using remote Dockerfiles and source directories from S3
 

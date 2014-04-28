@@ -4,7 +4,7 @@
   "description": "build images from many different sources!",
   "main": "lib/index.js",
   "scripts": {
-    "test": "lab -vl"
+    "test": "lab -v"
   },
   "author": "Bryan Kendall <bryan@runnable.com>",
   "repository": {

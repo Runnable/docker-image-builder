@@ -29,12 +29,11 @@ var contexts = {
 };
 var project = projects['1'];
 project.contexts = [contexts['1'], contexts['2']];
-var ib;
 
 Lab.experiment('image builder', function () {
   Lab.before(function (done) {
     // set up ImageBuilder
-    ib = new ImageBuilder({
+    this.ib = new ImageBuilder({
       dockerHost: 'http://localhost',
       dockerPort: 4243,
       project: project,
@@ -67,9 +66,12 @@ Lab.experiment('image builder', function () {
       .reply(200, '{"stream": "Successfully built 0123456789002"}');
     done();
   });
+  Lab.after(function (done) {
+    delete this.ib;
+  });
 
   Lab.test('returns docker image ids on build', function (done) {
-    ib.run(function (err, results) {
+    this.ib.run(function (err, results) {
       if (err) {
         done(err);
       } else {

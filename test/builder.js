@@ -58,11 +58,11 @@ Lab.experiment('image builder', function () {
     // mocks for docker requests
     nock('http://localhost:4243:4243')
       .filteringRequestBody(function(path) { return '*'; })
-      .post('http://localhost:4243/build?t=owner%2Fweb-server', '*')
+      .post('/build?t=owner%2Fweb-server', '*')
       .reply(200, '{"stream": "Successfully built 0123456789001"}');
     nock('http://localhost:4243:4243')
       .filteringRequestBody(function(path) { return '*'; })
-      .post('http://localhost:4243/build?t=owner%2Fcache', '*')
+      .post('/build?t=owner%2Fcache', '*')
       .reply(200, '{"stream": "Successfully built 0123456789002"}');
     done();
   });

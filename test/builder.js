@@ -75,8 +75,10 @@ Lab.experiment('image builder', function () {
       if (err) {
         done(err);
       } else {
-        Lab.expect(results.length).to.equal(2);
-        Lab.expect(results[0]).to.not.equal(results[1]);
+        Lab.expect(Object.keys(results).length).to.equal(2);
+        Lab.expect(Object.keys(results).indexOf('owner/web-server')).to.not.equal(-1);
+        Lab.expect(Object.keys(results).indexOf('owner/cache')).to.not.equal(-1);
+        Lab.expect(results['owner/web-server']).to.not.equal(results['owner/cache']);
         done();
       }
     });

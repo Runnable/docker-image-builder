@@ -1,6 +1,6 @@
 {
   "name": "docker-image-builder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "build images from many different sources!",
   "main": "lib/index.js",
   "scripts": {

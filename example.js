@@ -16,6 +16,10 @@ var contexts = {
     source: {
       type: 'local',
       location: 's3://bucket/path/to/some/source/'
+    },
+    versions: {
+      // this isn't used, but for illistation
+      '/file.txt': 'someVersionInformation'
     }
   },
   '2': {

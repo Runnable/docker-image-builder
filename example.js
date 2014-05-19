@@ -39,6 +39,12 @@ var ib = new ImageBuilder({
   dockerHost: 'http://localhost',
   dockerPort: 4243,
   project: project,
+  dockerOptions: {
+    nocache: true,
+    // verbose -- added option to print out all stream data,
+    //            not just the 'Step' lines.
+    verbose: false
+  },
   aws: {
     accessKeyId: 'AN-AWS-ACCESS-KEY',
     secretAccessKey: 'AN-AWS-SECRET-ACCESS-KEY'

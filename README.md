@@ -10,7 +10,7 @@ Builds docker images using remote Dockerfiles and source directories from S3
 
 ## Example
 
-For an example, see `example.js`. Replace the AWS placeholders with valid credentials, and populate the `contexts` with valid information (`dockerfile`, and `source.location` for each). This is how you would use this module externally.
+For an example, see `example.js`. Replace the AWS placeholders with valid credentials, and populate the `context` with valid information (`source`, and optionally `versions`). This is how you would use this module externally.
 
 This also assumes you have Docker running locally on the standard port (`4243`).
 
@@ -26,7 +26,7 @@ You can see more verbose debugging output by setting `DEBUG` before running.
 
 ## File Versions
 
-This now supports specifying S3 file versions for specific keys. See the `example.js` for how it is used, but here is the gist: in the `context` element of a `project`, include a key `versions` which is a map of `key`: `VersionId` and is used to retrieve specific versions of an object out of S3.
+This now supports specifying S3 file versions for specific keys. See the `example.js` for how it is used, but here is the gist: in the `context`, include a key `versions` which is a map of `Key`: `VersionId` and is used to retrieve specific versions of an object out of S3.
 
 ## Tests
 

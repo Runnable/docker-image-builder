@@ -1,44 +1,19 @@
 var ImageBuilder = require('./');
 
-var projects = {
-  '1': {
-    id: 1,
-    name: 'Example Project',
-    contexts: ['1', '2']
+var context = {
+  dockertag: 'owner/web-server',
+  source: 's3://bucket/path/to/some/source/',
+  versions: {
+    // used to specify versions of files
+    'file.txt': 'someVersionInformation',
+    'Dockerfile': 'someVersionInformation'
   }
 };
-
-var contexts = {
-  '1': {
-    id: 1,
-    dockertag: 'owner/web-server',
-    dockerfile: 's3://bucket/path/to/a/Dockerfile',
-    source: {
-      type: 'local',
-      location: 's3://bucket/path/to/some/source/'
-    },
-    versions: {
-      // this isn't used, but for illistation
-      '/file.txt': 'someVersionInformation'
-    }
-  },
-  '2': {
-    id: 2,
-    dockertag: 'owner/cache',
-    dockerfile: 's3://bucket/path/to/another/Dockerfile',
-    source: {}
-  }
-};
-
-// let's create the Image from each of the contexts, and return information for both
-
-var project = projects['1'];
-project.contexts = [contexts['1'], contexts['2']];
 
 var ib = new ImageBuilder({
   dockerHost: 'http://localhost',
   dockerPort: 4243,
-  project: project,
+  context: context,
   dockerOptions: {
     nocache: true,
     // verbose -- added option to print out all stream data,

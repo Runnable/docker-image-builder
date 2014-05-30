@@ -2,7 +2,8 @@
   "name": "docker-image-builder",
   "version": "0.2.0",
   "description": "build images from many different sources!",
-  "main": "lib/index.js",
+  "ma
+in": "lib/index.js",
   "scripts": {
     "test": "lab -v"
   },

@@ -1,3 +1,5 @@
+This project is no longer activly maintained.
+
 # docker-image-builder
 
 [![Build Status](https://travis-ci.org/Runnable/docker-image-builder.svg)](https://travis-ci.org/Runnable/docker-image-builder) [![Dependency Status](https://david-dm.org/Runnable/docker-image-builder.svg)](https://david-dm.org/Runnable/docker-image-builder) [![devDependency Status](https://david-dm.org/Runnable/docker-image-builder/dev-status.svg)](https://david-dm.org/Runnable/docker-image-builder#info=devDependencies)

@@ -1,4 +1,4 @@
-This project is no longer activly maintained.
+This project is no longer actively maintained.
 
 # docker-image-builder
 
